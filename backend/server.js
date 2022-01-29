@@ -12,6 +12,10 @@ app.get("/boss_data_eu", async (request, response) => {
     response.send(data);
 });
 
+app.get("/", (request, response) => {
+    response.send("This API returns BDO Boss names and timers.");
+});
+
 app.listen(port, () => {
     console.log('Listening on port: ' + port)
 });
