@@ -1,7 +1,7 @@
 $(document).ready(() => {
     function get_boss_data(){
         var settings = {
-            "url": "http://127.0.0.1:3001/boss_data_eu",
+            "url": "https://bdo-boss-alerter.herokuapp.com/boss_data_eu",
             "method": "GET",
             "timeout": 0,
         };
