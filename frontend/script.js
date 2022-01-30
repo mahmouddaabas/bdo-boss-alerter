@@ -13,12 +13,15 @@ $(document).ready(() => {
             });
             //If array has 2 bosses do this.
            if(filtered.length == 2){
+               $(".img1").attr("src", response[2]);
+               $(".img2").attr("src", response[3]);
                $(".boss_name").text("The bosses " + response[0][0] + " and " + response[0][1] + " will spawn in:")
                $(".timer").text(response[1])
            }
            else {
                 $(".boss_name").text("The boss " + response[0][0] + " will spawn in:")
                 $(".timer").text(response[1])
+                $(".img1").attr("src", response[2]);
            }
         });
     };

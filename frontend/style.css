@@ -10,6 +10,11 @@ body {
     margin-top: 70px;
 }
 
+.img1 {
+  margin: auto;
+  text-align: center;
+}
+
 .boss_information{
     margin: 0 auto;
     text-align: center;
