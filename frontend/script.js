@@ -7,16 +7,21 @@ $(document).ready(() => {
         };
         
         $.ajax(settings).done(function (response) {
-           if(response.length == 3){
-               $(".boss_name").text("The bosses " + response[0] + " and " + response[1] + " will spawn in:")
-               $(".timer").text(response[2])
+            //Filter response array to remove empty strings.
+            let filtered = response[0].filter(function(el) {
+                return el != "";
+            });
+            //If array has 2 bosses do this.
+           if(filtered.length == 2){
+               $(".boss_name").text("The bosses " + response[0][0] + " and " + response[0][1] + " will spawn in:")
+               $(".timer").text(response[1])
            }
            else {
-                $(".boss_name").text("The boss " + response[0] + " will spawn in:")
+                $(".boss_name").text("The boss " + response[0][0] + " will spawn in:")
                 $(".timer").text(response[1])
            }
         });
-    }
+    };
 
     setInterval(get_boss_data, 1200);
     setInterval(() => {
