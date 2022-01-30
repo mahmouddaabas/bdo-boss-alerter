@@ -22,6 +22,7 @@ $(document).ready(() => {
                 $(".boss_name").text("The boss " + response[0][0] + " will spawn in:")
                 $(".timer").text(response[1])
                 $(".img1").attr("src", response[2]);
+                $(".img2").attr("src", "");
            }
         });
     };
